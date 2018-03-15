@@ -1,0 +1,30 @@
+{
+  "name": "crawler-in-browser",
+  "version": "0.0.1",
+  "description": "A web crawler running in your web page and browser.",
+  "main": "lib/crawler-in-browser.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "cheerio": "0.22.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eklem/crawler-in-browser.git"
+  },
+  "keywords": [
+    "crawler",
+    "spider",
+    "scraper"
+  ],
+  "author": "Espen Klem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eklem/crawler-in-browser/issues"
+  },
+  "homepage": "https://github.com/eklem/crawler-in-browser#readme"
+}
