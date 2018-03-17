@@ -1,6 +1,6 @@
 {
   "name": "crawler-in-browser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A web crawler running in your web page and browser.",
   "main": "lib/crawler-in-browser.js",
   "directories": {

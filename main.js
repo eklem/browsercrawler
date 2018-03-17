@@ -10,5 +10,5 @@ fetch(url)
     var title = $('title').text()
     var body = $('body').text()
     var item = {url: url, title: title, body: body}
-    console.log(item)
+    console.dir(item)
   })
