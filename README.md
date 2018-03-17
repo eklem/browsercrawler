@@ -12,3 +12,12 @@ Crawling content for the search-index search engine in the browser.
 The idea is to have something better than Google Custom Search with the same (little) amount of work. Almost no programming to get going. Just add the JavaScript files and you have a search running. And if you add extra energy, then you'll get an even better search for your site.
 
 WIP
+
+
+## To build
+
+```console
+browserify -t brfs main.js --debug -o bundle.js
+```
+
+`main.js` should contain all required libraries and code for the "stuff" to run in the web page.
