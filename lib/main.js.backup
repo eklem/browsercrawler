@@ -1,4 +1,5 @@
 const cheerio = require('cheerio')
+const si = require('../node_modules/search-index/lib/index.js')
 url = 'https://eklem.github.io/norch-zapier-bookmarklet/'
 fetch(url)
   .then(function(response) {

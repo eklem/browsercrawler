@@ -1,14 +1,15 @@
 {
   "name": "crawler-in-browser",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A web crawler running in your web page and browser.",
-  "main": "lib/crawler-in-browser.js",
+  "main": "dist/bundle.js",
   "directories": {
     "lib": "lib"
   },
   "dependencies": {
     "brfs": "^1.5.0",
-    "cheerio": "0.22.0"
+    "cheerio": "0.22.0",
+    "search-index": "0.15.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

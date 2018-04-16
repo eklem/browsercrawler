@@ -17,7 +17,7 @@ WIP
 ## To build
 
 ```console
-browserify -t brfs main.js --debug -o bundle.js
+browserify -t brfs lib/main.js --standalone cib -o dist/bundle.js
 ```
 
 `main.js` should contain all required libraries and code for the "stuff" to run in the web page.
