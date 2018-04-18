@@ -1,7 +1,6 @@
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
-
   <title>Crawler-in-browser</title>
   <meta name="description" content="Crawler in browser">
   <meta name="author" content="Espen Klem">
@@ -9,32 +8,9 @@
 
 <body>
   <h1>Crawler in browser</h1>
-  <div align="center">
-    <a id="showAdd" href="#">add</a> | <a id="showSearch" href="#">search</a>
-    <div id="add">
-      <h1>Add docs to the index</h1>
-      <p>
-        enter some title text<br>
-        <textarea id="title"></textarea>
-      </p>
-      <p>
-        enter some body text<br>
-        <textarea id="body"></textarea>
-      </p>
-      <input type="button" value="add" id="a" />
-      <input type="button" value="crawl" id="c" />
-    </div>
-    <div id="search" style="display:none">
-      <h1>Search the index</h1>
-      <p>
-        <input id="s">
-      </p>
-      <p>
-        <a id="sa" href="#">show all docs in index</a>
-      </p>
-    </div>
-    <br>
-    <br>
+  <div>
+    <input type="button" value="crawl" id="c" /><br />
+    <input id="s" />
     <div id="result"></div>
   </div>
   <script src="./dist/search-index.js"></script>

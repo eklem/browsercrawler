@@ -4,8 +4,8 @@ var mySearchIndex
 // display search results in a div
 const paintResultDiv = function(result) {
   var node = document.createElement('div')
-  node.innerHTML = '<b>' + result.document.title + '</b><br>'
-    + result.document.body + '<br>---'
+  node.innerHTML = '<h2>' + result.document.title + '</h2>'
+    + '<code>' + JSON.stringify(result) + '</code>'
   document.getElementById('result').appendChild(node)
 }
 
@@ -36,30 +36,9 @@ SearchIndex({
 
 // PAGE CONTROLLERS
 
-// Add a doc to the index
-document.getElementById("a").onmousedown = function() {
-  const t = document.getElementById("title").value
-  const b = document.getElementById("body").value
-  if ((t + b).length > 0) indexData([{ title: t, body: b }])
-}
-
 // Add a crawled doc to the index
 document.getElementById("c").onmousedown = function() {
-  var testCrawl = cib.crawl('https://eklem.github.io/norch-zapier-bookmarklet/')
-}
-
-// show the search panel
-document.getElementById("showSearch").onmousedown = function() {
-  document.getElementById("add").style.display = "none"
-  document.getElementById("search").style.display = "block"
-  document.getElementById("s").focus()
-}
-
-// show the add panel
-document.getElementById("showAdd").onmousedown = function() {
-  document.getElementById("add").style.display = "block"
-  document.getElementById("search").style.display = "none"
-  document.getElementById("title").focus()
+  cib.crawl('https://eklem.github.io/crawler-in-browser/')
 }
 
 // do a search
@@ -67,10 +46,11 @@ document.getElementById("s").onkeyup = function() {
   search(document.getElementById("s").value)
 }
 
-// do a search
-document.getElementById("sa").onmousedown = function() {
-  search()
-}
 
-// init with title field in focus
-document.getElementById("title").focus()
+// crawler hook for crawled items
+// What to do with 
+function crawlHook(item) {
+  indexData(item)
+  console.log('item(s) indexed: ')
+  console.dir(item)
+}
