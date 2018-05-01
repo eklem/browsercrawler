@@ -55,7 +55,9 @@ function crawlHook(item) {
   console.dir(item)
   // TODO: A - Add item.urls to pouchDB URL-queue. The function for this needs to check if it's a valid URL and if yes, if it's already added
   //       B - When item is crawled, returned and indexed:
-  //       --> Mark as crawled in puchDB URL-queue
+  //         --> Mark as crawled in puchDB URL-queue
   //       C - Pick up next URL to crawl and send to cib.crawl()
   //       D - Clear the crawled-flag for re-crawling.
+  //       E - Possibility to start with adding an array to pouchDB URL-queue if you know all the URLs to be crawled
+  //         --> cib.crawl() should also have a followURLs-flag, which if set to false, doesn't pick up new URLs to be added to URL-queue
 }
