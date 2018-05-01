@@ -53,4 +53,8 @@ function crawlHook(item) {
   indexData(item)
   console.log('item(s) indexed: ')
   console.dir(item)
+  // TODO: A - Add item.urls to pouchDB URL-queue
+  //       B - When item is crawled, returned and indexed:
+  //       --> Mark as crawled in puchDB URL-queue
+  //       C - Pick up next URL to crawl and send to cib.crawl()
 }
