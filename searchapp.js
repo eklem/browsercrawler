@@ -53,7 +53,10 @@ function crawlHook(item) {
   indexData(item)
   console.log('item(s) indexed: ')
   console.dir(item)
-  // TODO: A - Add item.urls to pouchDB URL-queue. The function for this needs to check if it's a valid URL and if yes, if it's already added
+  // TODO: A - Add item.urls to pouchDB URL-queue. The function for this needs to:
+  //         --> Check if it's a valid URL and if yes
+  //         --> Check if it's within the boundaries (domain + path, like eklem.github.io/crawler-in-browser/)
+  //         --> Check if it's already added
   //       B - When item is crawled, returned and indexed:
   //         --> Mark as crawled in puchDB URL-queue
   //       C - Pick up next URL to crawl and send to cib.crawl()
