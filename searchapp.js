@@ -1,5 +1,5 @@
 // the variable that will become the search index
-const mySearchIndex
+const mySearchIndex = {}
 
 // display search results in a div
 const paintResultDiv = function(result) {
