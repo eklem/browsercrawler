@@ -63,4 +63,5 @@ function crawlHook(item) {
   //       D - Clear the crawled-flag for re-crawling.
   //       E - Possibility to start with adding an array to pouchDB URL-queue if you know all the URLs to be crawled
   //         --> cib.crawl() should also have a followURLs-flag, which if set to false, doesn't pick up new URLs to be added to URL-queue
+  //       F - Wrap each part of the crawlHook as a promise?
 }
