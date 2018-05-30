@@ -50,6 +50,19 @@ document.getElementById("s").onkeyup = function() {
 // crawler hook for crawled items
 // What to do with 
 function crawlHook(item) {
+  obj = item[0]
+  console.dir(obj)
+  var db = new PouchDB('');
+  db.put({
+    _id: obj.id,
+    crawled: true
+  }).then(function (response) {
+    // handle response
+    console.log(response)
+  }).catch(function (err) {
+    console.log(err);
+  });
+  
   indexData(item)
   console.log('item(s) indexed: ')
   console.dir(item)
