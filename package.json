@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "dependencies": {
-    "brfs": "^1.5.0",
+    "brfs": "^2.0.2",
     "cheerio": "0.22.0",
     "search-index": "0.15.0"
   },
